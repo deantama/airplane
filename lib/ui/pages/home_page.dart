@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:airplane/shared/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +20,7 @@ class HomePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Howday\nDean Pratama Putra ',
+                    'Howday,\nDean Pratama Putra ',
                     style: BlackStyleColor.copyWith(
                       fontSize: 24,
                       fontWeight: semiBold,
@@ -74,46 +72,72 @@ class HomePage extends StatelessWidget {
                 color: kWhiteColor,
               ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                      width: 180,
-                      height: 220,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(18),
-                        image: DecorationImage(
-                          image: AssetImage(
-                            'assets/image_lake_ciliwung.png',
-                          ),
+                    width: 180,
+                    height: 220,
+                    margin: EdgeInsets.only(bottom: 20),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(18),
+                      image: DecorationImage(
+                        image: AssetImage(
+                          'assets/image_lake_ciliwung.png',
                         ),
                       ),
-                      child: Align(
-                        alignment: Alignment.topRight,
-                        child: Container(
-                          width: 55,
-                          height: 30,
-                          decoration: BoxDecoration(
-                            color: kWhiteColor,
-                            borderRadius: BorderRadius.only(
-                              bottomLeft: Radius.circular(18),
-                            ),
+                    ),
+                    child: Align(
+                      alignment: Alignment.topRight,
+                      child: Container(
+                        width: 55,
+                        height: 30,
+                        decoration: BoxDecoration(
+                          color: kWhiteColor,
+                          borderRadius: BorderRadius.only(
+                            bottomLeft: Radius.circular(18),
                           ),
-                          child: Row(
-                            children: [
-                              Container(
-                                width: 24,
-                                height: 24,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      'assets/icon_image_star.png',
-                                    ),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              width: 24,
+                              height: 240,
+                              margin: EdgeInsets.only(right: 2),
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage(
+                                    'assets/icon_image_star.png',
                                   ),
                                 ),
                               ),
-                            ],
+                            ),
+                            Text(
+                              '4.8',
+                              style: BlackStyleColor.copyWith(
+                                fontWeight: medium,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 20),
+                    child: Column(
+                      children: [
+                        Text(
+                          'Lake Ciliwing',
+                          style: BlackStyleColor.copyWith(
+                            fontSize: 18,
+                            fontWeight: medium,
                           ),
                         ),
-                      )),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
